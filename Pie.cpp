@@ -284,8 +284,8 @@ void Pie::set_window_size(unsigned width, unsigned height){
  */
 void Pie::save_as_png(std::string title){
 	title += ".png";
-	this->pipe.write_command("set terminal png");
-	std::string com = "set output \'" + title + '\'';
+	this->pipe.write_command("set terminal pngcairo");
+	std::string com = "set output \'" + title + "\'";
 	this->pipe.write_command(com);
 	this->pipe.write_command("replot");
 	this->pipe.write_command("set terminal x11");

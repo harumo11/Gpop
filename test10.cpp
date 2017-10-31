@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 		plot.plot(50, "b");
 		plot.pause(100);
 	}
+	plot.save_as_png("test10_");
 
-	plot.save_as_png("test10");
 	return 0;
 }

@@ -333,7 +333,7 @@ void Series::set_y_label(std::string label)
 void Series::save_as_png(std::string title)
 {
 	title += ".png";
-	this->pipe.write_command("set terminal png");
+	this->pipe.write_command("set terminal pngcairo");
 	std::string com = "set output \'" + title + '\'';
 	this->pipe.write_command(com);
 	this->pipe.write_command("replot");
