@@ -276,3 +276,18 @@ void Pie::set_window_size(unsigned width, unsigned height){
 
 	this->pipe.write_command(com);
 }
+
+/**
+ * @brief プロットをpngファイルとして保存する
+ *
+ * @param title 保存するpngファイルの名前.拡張子は不要
+ */
+void Pie::save_as_png(std::string title){
+	title += ".png";
+	this->pipe.write_command("set terminal png");
+	std::string com = "set output \'" + title + '\'';
+	this->pipe.write_command(com);
+	this->pipe.write_command("replot");
+	this->pipe.write_command("set terminal x11");
+	this->pipe.write_command("set output");
+}
