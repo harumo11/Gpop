@@ -20,6 +20,13 @@ class Gnuplot {
 		bool is_open();
 		void flush();
 
+		//設定関数．各クラスで適宜再実装される
+		void util_set_x_label(std::string label);
+		void util_set_y_label(std::string label);
+		void util_set_window_size(unsigned int width, unsigned int height);
+		void util_set_x_range(double min, double max);
+		void util_set_y_range(double min, double max);
+
 
 	private:
 		FILE* file_discripter;

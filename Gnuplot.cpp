@@ -107,3 +107,45 @@ void Gnuplot::flush(){
 	//pipeのファイルをフラッシュする（強制的に書き出す）
 	fflush(this->file_discripter);
 }
+
+void Gnuplot::util_set_x_label(std::string label){
+
+	std::string com = "\"" + label + "\"";
+	this->write_command("set xl " + com);
+}
+
+void Gnuplot::util_set_y_label(std::string label){
+
+	std::string com = "\"" + label + "\"";
+	this->write_command("set yl " + com);
+}
+
+void Gnuplot::util_set_window_size(unsigned int width, unsigned int height){
+
+	std::string com = "set term qt size ";
+	com += std::to_string(width);
+	com += ", ";
+	com += std::to_string(height);
+
+	this->write_command(com);
+}
+
+void Gnuplot::util_set_x_range(double min, double max){
+
+	this->write_command("set xrange["
+			            + std::to_string(min)
+						+ ":"
+						+ std::to_string(max)
+						+ "]");
+}
+
+void Gnuplot::util_set_y_range(double min, double max){
+
+	this->write_command("set yrange["
+			            + std::to_string(min)
+						+ ":"
+						+ std::to_string(max)
+						+ "]");
+}
+
+

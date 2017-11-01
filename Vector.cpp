@@ -57,3 +57,28 @@ void Vector::show(){
 	//強制的にpipeの内容データを書き出し
 	this->pipe.flush();
 }
+
+void Vector::set_x_label(std::string label){
+
+	this->pipe.util_set_x_label(label);
+}
+
+void Vector::set_y_label(std::string label){
+
+	this->pipe.util_set_y_label(label);
+}
+
+void Vector::set_x_range(double min, double max){
+
+	this->pipe.util_set_x_range(min, max);
+}
+
+void Vector::set_y_range(double min, double max){
+
+	this->pipe.util_set_y_range(min, max);
+}
+
+void Vector::set_window_size(unsigned int width, unsigned int height){
+	
+	this->pipe.util_set_window_size(width, height);
+}

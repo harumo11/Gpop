@@ -24,6 +24,11 @@ class Vector {
 		~Vector();
 		void plot(double x, double y, double dx, double dy);
 		void show();
+		void set_x_label(std::string label);
+		void set_y_label(std::string label);
+		void set_window_size(unsigned int width, unsigned int height);
+		void set_x_range(double min, double max);
+		void set_y_range(double min, double max);
 
 	private:
 		Gnuplot pipe;
