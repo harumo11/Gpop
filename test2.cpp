@@ -21,6 +21,7 @@ int main(int argc, char const* argv[])
 		v.push_back(std::sin(i*M_PI/180));
 	}
 	plot.plot(v);
+
 	plot.set_title("The first plot");
 	plot.set_x_label("x");
 	plot.set_y_label("y");
