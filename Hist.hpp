@@ -6,12 +6,19 @@
 #include <utility>
 #include "Gnuplot.hpp"
 
+class Element {
+	public:
+		double x;
+		double y;
+};
+
 class Hist {
 	public:
 		Hist();
 		Hist(double relative_width);
 		~Hist();
 		void plot(double data);
+		void plot(double x, double y);
 		void plot(std::vector<double> &data);
 		void show();
 		void set_line(bool should_use_line);

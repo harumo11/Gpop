@@ -1,4 +1,15 @@
 # gpop
+
+## TODO list
+
+- [Hist,Bar]Histはヒストグラムをする（Opencv）Barは棒グラフ
+- [Bar] 棒グラフのタイトルを設定できるように
+- [Hist] 透明設定ができるように
+- [Hist] 枠の設定ができるように
+- [Hist] ヒストグラム作成ができるように
+- [Series] x,yの値を入力できるように
+- [Series] x,yの値で描画できるように
+
 Gnu Plot on Pipe Library
 
 簡単にデータをC++11プロットするライブラリです．
