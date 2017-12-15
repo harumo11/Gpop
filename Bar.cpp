@@ -2,7 +2,7 @@
 
 
 /**
- * @brief コンストラクタ 1 of 2
+ * @brief コンストラクタ 1 of 3
  */
 Bar::Bar() : pipe()
 {
@@ -10,7 +10,7 @@ Bar::Bar() : pipe()
 
 
 /**
- * @brief コンストラクタ 2 of 2
+ * @brief コンストラクタ 2 of 3
  *
  * @param title プロットのタイトル
  */
@@ -20,6 +20,13 @@ Bar::Bar(std::string title) : pipe()
 }
 
 
+/**
+ * @brief コンストラクタ 3 of 3
+ *
+ * @param title プロットのタイトル
+ * @param width ウィンドウの横幅
+ * @param height ウィンドウの縦幅
+ */
 Bar::Bar(std::string title, unsigned int width, unsigned int height) : pipe()
 {
 	this->set_title(title);
@@ -142,6 +149,17 @@ void Bar::set_title(std::string title)
  */
 void Bar::show()
 {
+	//data_containerの中で最大の要素数を見つける
+	int max_element_num_in_data_container = 0;
+	for (auto&& vec : this->data_container){
+		if ((int)vec.size() > max_element_num_in_data_container) {
+			max_element_num_in_data_container = vec.size();
+		}
+	}
+
+	//ｘ軸の範囲を0から最大の要素数までに変更する
+	this->set_x_range(-1.0, max_element_num_in_data_container);
+
 	//棒グラフを色で埋めることをgnuplotに伝える
 	this->pipe.write_command("set style fill solid");
 
