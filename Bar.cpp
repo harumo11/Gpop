@@ -242,6 +242,17 @@ void Bar::resize_data_container()
  */
 void Bar::pause(int msec = 1){
 
+	//data_containerの中で最大の要素数を見つける
+	int max_element_num_in_data_container = 0;
+	for (auto&& vec : this->data_container){
+		if ((int)vec.size() > max_element_num_in_data_container) {
+			max_element_num_in_data_container = vec.size();
+		}
+	}
+
+	//ｘ軸の範囲を0から最大の要素数までに変更する
+	this->set_x_range(-1.0, max_element_num_in_data_container);
+
 	//棒グラフを色で埋めることをgnuplotに伝える
 	this->pipe.write_command("set style fill solid");
 
