@@ -85,8 +85,43 @@ void Series::plot(std::vector<double> &data)
 
 	//作成したxy座標のベクターを保存
 	this->data_container.push_back(coordinate_list);
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+/**
+ * @brief 線の種類込みで，プロットしたいベクターデータを加える
+ *
+ * @param data プロットしたいデータ
+ * @param property 線の種類などの設定．設定方法はgnuplotに従う
+ *
+ * (例) with lp lt 7 lw 2
+ */
+void Series::plot(std::vector<double> &data, const std::string property)
+{
+	std::list<XY> coordinate_list;
+	XY coorinate;
+
+	//x軸のデータが与えられないので，
+	//0からdata.size()個だけx軸のデータを作成する．
+	//同時に与えられたy軸のデータを格納する
+	for (int i = 0; i < (int)data.size() ; i++) {
+
+		//座標を作成
+		coorinate.x = i;
+		coorinate.y = data[i];
+
+		//作成した座標をベクターに格納
+		coordinate_list.push_back(coorinate);
+	}
+
+	//作成したxy座標のベクターを保存
+	this->data_container.push_back(coordinate_list);
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back(property);
+}
 
 /**
  * @brief プロットしたいデータを加える 2 of 2
@@ -100,8 +135,30 @@ void Series::plot(double data){
 	//data_bufferに新しいdataを追加する
 	this->data_buffer.push_back(data);
 
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+/**
+ * @brief 線の種類込みでプロットしたいデータを加える
+ *
+ * リアルタイムプロットの場合は，この関数を使用してデータを逐次追加する
+ * リアルタイムプロットの場合，最初だけこの関数を使用して，線の種類を指定して
+ * 2回目以降は指定しなくても，1回目の設定を再利用します．
+ *
+ * @param data 追加するデータ
+ * @param property 線の種類などの設定．設定方法はgnuplotに従う
+ *
+ * (例) with lp lt 7 lw 2
+ */
+void Series::plot(double data, const std::string property){
+
+	//data_bufferに新しいdataを追加する
+	this->data_buffer.push_back(data);
+
+	//this->propertyを適当に設定
+	this->data_property.push_back(property);
+}
 
 /**
  * @brief gnuplotに送るようのコマンドを作成する関数
@@ -114,8 +171,10 @@ std::string Series::make_command(){
 
 	//data_containerのデータの種類だけ<"-" w lp lt 7 lw 1.5,>を作成する．
 	for (int i = 0; i < (int)this->data_container.size(); i++) {
-		command += "'-' w p pt 7 lw 1.5,";
+		//command += "'-' w p pt 7 lw 1.5,";
+		command += "'-'" + this->data_property[i] + ',';
 	}
+	//std::cout << "com " << command << std::endl;
 	
 	return command;
 }
@@ -142,6 +201,18 @@ void Series::set_title(std::string title)
  */
 void Series::show()
 {
+	//最初の一回だけdata_propertyにdata_property_bufferの中身をそのまま移す
+	if (this->data_property.empty()) {
+		this->data_property = this->data_property_buffer;
+		this->data_property_buffer.clear();
+	}
+	else {
+		//2回目以降は追加された分をdata_propertyに上書きする
+		for (int i = 0; i < (int)this->data_property_buffer.size(); i++) {
+			this->data_property[i] = this->data_property_buffer[i];
+		}
+		this->data_property_buffer.clear();
+	}
 
 	//これからインラインモードでデータを入力することをgnuplotに伝える．
 	this->pipe.write_command(this->make_command());
@@ -238,6 +309,19 @@ void Series::pause(int msec = 1){
 			//data_containerに代入
 			this->data_container.push_back({coorinate});
 		}
+	}
+
+	//最初の一回だけdata_propertyにdata_property_bufferの中身をそのまま移す
+	if (this->data_property.empty()) {
+		this->data_property = this->data_property_buffer;
+		this->data_property_buffer.clear();
+	}
+	else {
+		//2回目以降は追加された分をdata_propertyに上書きする
+		for (int i = 0; i < (int)this->data_property_buffer.size(); i++) {
+			this->data_property[i] = this->data_property_buffer[i];
+		}
+		this->data_property_buffer.clear();
 	}
 
 	//data_containerにdata_bufferを追加する

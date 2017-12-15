@@ -30,7 +30,9 @@ class Series {
 		~Series();
 
 		void plot(std::vector<double> &data);
+		void plot(std::vector<double> &data, const std::string property);
 		void plot(double data);
+		void plot(double data, const std::string property);
 		void show();
 		void pause(int msec);
 		void set_x_range(double min, double max);
@@ -77,6 +79,15 @@ class Series {
 		 */
 		int max_number = 10000;
 
+		/**
+		 * @brief 線の種類，大きさ，色などの指定を保存する変数
+		 */
+		std::vector<std::string> data_property;
+
+		/**
+		 * @brief pause(),show()が呼ばれた時，data_propertyに内容を移す
+		 */
+		std::vector<std::string> data_property_buffer;
 };
 
 
