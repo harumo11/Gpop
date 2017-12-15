@@ -112,9 +112,9 @@ std::string Series::make_command(){
 
 	std::string command = "plot ";
 
-	//data_containerのデータの種類だけ<"-" w lp,>を作成する．
+	//data_containerのデータの種類だけ<"-" w lp lt 7 lw 1.5,>を作成する．
 	for (int i = 0; i < (int)this->data_container.size(); i++) {
-		command += "'-' w lp,";
+		command += "'-' w p pt 7 lw 1.5,";
 	}
 	
 	return command;
