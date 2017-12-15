@@ -2,25 +2,28 @@
 
 ## TODO list
 
-- [Hist,Bar]Histはヒストグラムをする（Opencv）Barは棒グラフ
-- [Bar] 棒グラフのタイトルを設定できるように
+- [Hist,Bar]Histはヒストグラムをする（Opencv）Barは棒グラフ．明確な差異がある
 - [Hist] 透明設定ができるように
 - [Hist] 枠の設定ができるように
 - [Hist] ヒストグラム作成ができるように
 - [Series] x,yの値を入力できるように
 - [Series] x,yの値で描画できるように
+- [Serise] 描画する点を綺麗にする
+- [Bar] リアルタイムプロットしても，プロット毎にプロットが消えるように
+___
 
-Gnu Plot on Pipe Library
+# Gnu Plot on Pipe Library
 
 簡単にデータをC++11プロットするライブラリです．
 できるだけ簡単にプロットすることに注力しています．
 
 現在，使用可能なプロットの種類は以下のとおりです．
 
-- Serise
-- Pie
+- [Serise](./docs/Series.md)
+- [Pie](./docs/Pie.md)
+- [Vector](./docs/Vector.md)
 - Histogram
-- Vector
+- Bar
 
 また，プロットする機能以外にPNGファイルとして保存したり，逐次データを更新してリアルタイムプロットを行うこともできます．下の表で表記がNoとなっていてもPNGの保存はGUIから行うことが可能であり，またEPSもGUIから保存可能です．
 
@@ -28,8 +31,9 @@ Gnu Plot on Pipe Library
 |:----:|:-----------:|:--------------:|
 |Serise|OK       |OK            |
 |Pie|  OK        |OK            |
-|Histogram|  OK        |OK            |
-|Vector|No       |No            |
+|Vector|NO       |NO            |
+|Histogram|  OK  |OK      |
+|Bar| OK        |OK             |
 
 ## Dependency
 
@@ -57,7 +61,7 @@ sudo make install
 ## Sample
 わずか数行でプロットすることが可能なことが以下のプログラムを見るとわかるでしょう．
 
-```c++
+```cpp
 #include <iostream>
 #include <string>
 #include <vector>
@@ -103,6 +107,7 @@ int main(void){
 |test11    |正規分布の棒グラフ|Hist|
 |test12    |ランダムな値のヒストグラム|Bar|
 |test13    |合計が100となる入力の円グラフのプロット|Pie|
+|test14    |test13の内容をpngとして保存するもの|Pie|
 
 
 
