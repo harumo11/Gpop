@@ -122,7 +122,7 @@ std::string Bar::make_command(){
 
 
 /**
- * @brief plotのタイトルを設定する関数
+ * @brief プロットのタイトルを設定する関数
  *
  * @param title グラフのタイトル
  */

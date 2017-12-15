@@ -9,13 +9,13 @@ int main(int argc, char const* argv[])
 	std::random_device rnd;
 	std::vector<double> vec;
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 20; i++) {
 		vec.push_back(rnd());
 	}
 	plot.plot(vec);
 	vec.clear();
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 20; i++) {
 		vec.push_back(rnd());
 	}
 	plot.plot(vec);

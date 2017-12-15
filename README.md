@@ -100,6 +100,9 @@ int main(void){
 |test8     |ウィンドウサイズの変更|Series|
 |test9     |ベクター図の作成|Vector|
 |test10    |リアルタイム円グラフ|Pie|
+|test11    |正規分布の棒グラフ|Hist|
+|test12    |ランダムな値のヒストグラム|Bar|
+|test13    |合計が100となる入力の円グラフのプロット|Pie|
 
 
 

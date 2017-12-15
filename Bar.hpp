@@ -54,8 +54,8 @@ class Bar {
 		/**
 		 * @brief data_containerにデータを渡す用の1次元配列
 		 *
-		 * size()がプロットされる値の種類になる．
-		 * plot()でdata_containerに入れて，show()でdata_containerに移す
+		 * size()がプロットされる値の種類の数になる．
+		 * plot()でdata_bufferに入れて，show()でdata_containerに移す
 		 */
 		std::list<double> data_buffer;
 

@@ -12,6 +12,7 @@ int main(int argc, char const* argv[])
 	plot.plot(1,0,0,1);
 	plot.plot(1,1,-1,0);
 	plot.plot(0,1,0,-1);
+	plot.plot(-1,-1,1,1);
 	plot.show();
 
 	sleep(3);
