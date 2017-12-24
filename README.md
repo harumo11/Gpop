@@ -10,7 +10,12 @@
 - [Series] x,yの値で描画できるように
 - [Series] std::stringで線の種類などをgnuplotそのままに入力し，指定できるようにする．
 - [Bar] リアルタイムプロットしても，プロット毎にプロットが消えるように
-___
+
+---
+
+## NOTE list
+- [setting] Setting - window - behavior 
+	Prevent focus stealing - ON
 
 # Gnu Plot on Pipe Library
 
