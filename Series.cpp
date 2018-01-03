@@ -90,6 +90,62 @@ void Series::plot(std::vector<double> &data)
 	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data){
+	std::list<XY> coordinate_list;
+	XY coorinate;
+
+	//x_dataとy_dataのサイズが等しくなければエラーを起こす
+	if (x_data.size() == y_data.size()) {
+		std::cout << "[error] in Series::plot. x_data's size and y_data' size is not same" << std::endl;
+		std::exit(1);
+	}
+
+	//data_containerに格納するためのデータを作成する
+	for (int i = 0; i < (int)x_data.size() ; i++) {
+
+		//座標を作成
+		coorinate.x = x_data[i];
+		coorinate.y = y_data[i];
+
+		//作成した座標をベクターに格納
+		coordinate_list.push_back(coorinate);
+	}
+
+	//作成したxy座標のベクターを保存
+	this->data_container.push_back(coordinate_list);
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+}
+
+void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data, const std::string property){
+	std::list<XY> coordinate_list;
+	XY coorinate;
+
+	//x_dataとy_dataのサイズが等しくなければエラーを起こす
+	if (x_data.size() == y_data.size()) {
+		std::cout << "[error] in Series::plot. x_data's size and y_data' size is not same" << std::endl;
+		std::exit(1);
+	}
+
+	//data_containerに格納するためのデータを作成する
+	for (int i = 0; i < (int)x_data.size() ; i++) {
+
+		//座標を作成
+		coorinate.x = x_data[i];
+		coorinate.y = y_data[i];
+
+		//作成した座標をベクターに格納
+		coordinate_list.push_back(coorinate);
+	}
+
+	//作成したxy座標のベクターを保存
+	this->data_container.push_back(coordinate_list);
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back(property);
+}
+
 /**
  * @brief 線の種類込みで，プロットしたいベクターデータを加える
  *
@@ -139,6 +195,7 @@ void Series::plot(double data){
 	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+
 /**
  * @brief 線の種類込みでプロットしたいデータを加える
  *
@@ -158,6 +215,48 @@ void Series::plot(double data, const std::string property){
 
 	//this->propertyを適当に設定
 	this->data_property.push_back(property);
+}
+
+void Series::plot(double x_data, double y_data){
+
+	//最初の一回だけ，segmentation faultを防ぐために空データを
+	//data_containerに追加する．
+	if (this->data_container.empty()) {
+		this->data_container.push_back({});
+	}
+
+	//data_containerに追加用のデータ作成
+	XY coordinate;
+	coordinate.x = x_data;
+	coordinate.y = y_data;
+
+	//data_container_index行の一番後ろに作成したデータ追加
+	this->data_container[this->data_container_index].push_back(coordinate);
+	this->data_container_index++;
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+}
+
+void Series::plot(double x_data, double y_data, const std::string property){
+
+	//最初の一回だけ，segmentation faultを防ぐために空データを
+	//data_containerに追加する．
+	if (this->data_container.empty()) {
+		this->data_container.push_back({});
+	}
+
+	//data_containerに追加用のデータ作成
+	XY coordinate;
+	coordinate.x = x_data;
+	coordinate.y = y_data;
+
+	//data_container_index行の一番後ろに作成したデータ追加
+	this->data_container[this->data_container_index].push_back(coordinate);
+	this->data_container_index++;
+
+	//this->propertyを適当に設定
+	this->data_property_buffer.push_back(property);
 }
 
 /**
@@ -201,6 +300,9 @@ void Series::set_title(std::string title)
  */
 void Series::show()
 {
+	//data_container_indexを0に初期化する
+	this->data_container_index = 0;
+
 	//最初の一回だけdata_propertyにdata_property_bufferの中身をそのまま移す
 	if (this->data_property.empty()) {
 		this->data_property = this->data_property_buffer;
@@ -290,6 +392,8 @@ void Series::resize_data_container()
  */
 void Series::pause(int msec = 1){
 
+	//data_container_indexを0に初期化する
+	this->data_container_index = 0;
 
 	//もし最大表示個数が設定されていたら，その分だけ，data_containerを整理する．
 	if (this->max_number != 0) {

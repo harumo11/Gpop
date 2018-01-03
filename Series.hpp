@@ -33,6 +33,10 @@ class Series {
 		void plot(std::vector<double> &data, const std::string property);
 		void plot(double data);
 		void plot(double data, const std::string property);
+		void plot(std::vector<double> &x_data, std::vector<double> &y_data);
+		void plot(std::vector<double> &x_data, std::vector<double> &y_data, const std::string property);
+		void plot(double x_data, double y_data);
+		void plot(double x_data, double y_data, const std::string property);
 		void show();
 		void pause(int msec);
 		void set_x_range(double min, double max);
@@ -88,6 +92,12 @@ class Series {
 		 * @brief pause(),show()が呼ばれた時，data_propertyに内容を移す
 		 */
 		std::vector<std::string> data_property_buffer;
+
+		/**
+		 * @brief data_containerの何行目にplot()でデータを詰めればいいかを指し示す変数．
+		 * show(), pause()で0に初期化される．
+		 */
+		int data_container_index = 0;
 };
 
 
