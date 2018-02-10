@@ -346,11 +346,20 @@ void Series::show()
  */
 void Series::set_x_range(double min, double max)
 {
+	this->is_autoscale = false;
 	this->pipe.write_command("set xrange["
 			                 + std::to_string(min)
 							 + ":"
 							 + std::to_string(max)
 							 + "]");
+}
+
+/**
+ *  @brief autoscaleを使用する
+ */
+void Series::set_autoscale(){
+	this->pipe.write_command("set autoscale");
+	this->is_autoscale = true;
 }
 
 
@@ -362,6 +371,7 @@ void Series::set_x_range(double min, double max)
  */
 void Series::set_y_range(double min, double max)
 {
+	this->is_autoscale = false;
 	this->pipe.write_command("set yrange["
 			                 + std::to_string(min)
 							 + ":"
@@ -466,14 +476,16 @@ void Series::pause(int msec = 1){
 	//data_bufferを空にする
 	this->data_buffer.clear();
 
-	//autoscaleを設定
-	this->pipe.write_command("set autoscale");
+	//もし，set_autoscale()が使用されていたらautoscaleを設定
+	if (this->is_autoscale) {
+		this->set_autoscale();
+	}
 
 	//pipeを強制的に書き出す．
 	this->pipe.flush();
 
 	//sleep
-	usleep(msec*1000);
+	usleep(msec*1);
 }
 
 /**
@@ -518,6 +530,13 @@ void Series::set_y_label(std::string label)
 }
 
 
+/**
+ *  @brief pngとしてグラフを保存する．
+ *
+ *  @param title 保存する画像の名前
+ *  
+ *  \pre この関数を呼び出す前にSeries::show()を呼び出してグラフを描画してください.
+ */
 void Series::save_as_png(std::string title)
 {
 	title += ".png";

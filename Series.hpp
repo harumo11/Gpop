@@ -47,8 +47,10 @@ class Series {
 		void set_y_label(std::string label);
 		void save_as_png(std::string title);
 		void set_window_size(unsigned int width, unsigned int height);
+		void set_autoscale();
 
 	private:
+		bool is_autoscale = true;
 		std::string make_command();
 		void resize_data_container();
 		Gnuplot pipe;
