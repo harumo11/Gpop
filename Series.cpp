@@ -90,6 +90,17 @@ void Series::plot(std::vector<double> &data)
 	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+/**
+ * @brief 線の種類込みで，プロットしたいベクターデータを加える
+ *
+ * @param x_data プロットしたいxデータ
+ * @param y_data プロットしたいyデータ
+ *
+ * (例) with lp lt 7 lw 2
+ *
+ * \note 
+ * リアルタイムプロットを行いたい場合はこの関数は使用できません．
+ */
 void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data){
 	std::list<XY> coordinate_list;
 	XY coorinate;
@@ -118,6 +129,18 @@ void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data){
 	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+/**
+ * @brief 線の種類込みで，プロットしたいベクターデータを加える
+ *
+ * @param x_data プロットしたいxデータ
+ * @param y_data プロットしたいyデータ
+ * @param property 線の種類などの設定．設定方法はgnuplotに従う
+ *
+ * (例) with lp lt 7 lw 2
+ *
+ * \note 
+ * リアルタイムプロットを行いたい場合はこの関数は使用できません．
+ */
 void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data, const std::string property){
 	std::list<XY> coordinate_list;
 	XY coorinate;
@@ -153,6 +176,9 @@ void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data, cons
  * @param property 線の種類などの設定．設定方法はgnuplotに従う
  *
  * (例) with lp lt 7 lw 2
+ *
+ * \note 
+ * リアルタイムプロットを行いたい場合はこの関数は使用できません．
  */
 void Series::plot(std::vector<double> &data, const std::string property)
 {
@@ -182,7 +208,7 @@ void Series::plot(std::vector<double> &data, const std::string property)
 /**
  * @brief プロットしたいデータを加える 2 of 2
  *
- * リアルタイムプロットの場合は，この関数を使用してデータを逐次追加する
+ * プロットとのためのデータをこの関数を使用して1つずつ追加する
  *
  * @param data 追加するデータ
  */
@@ -199,9 +225,9 @@ void Series::plot(double data){
 /**
  * @brief 線の種類込みでプロットしたいデータを加える
  *
- * リアルタイムプロットの場合は，この関数を使用してデータを逐次追加する
- * リアルタイムプロットの場合，最初だけこの関数を使用して，線の種類を指定して
- * 2回目以降は指定しなくても，1回目の設定を再利用します．
+ * プロットとのためのデータをこの関数を使用して1つずつ追加する
+ * リアルタイムプロットの場合，最初だけこの関数を使用して，線の種類を指定すれば
+ * 2回目以降は線の種類などを指定しないplot関数を使用した場合でも，1回目の設定を再利用します．
  *
  * @param data 追加するデータ
  * @param property 線の種類などの設定．設定方法はgnuplotに従う
@@ -217,6 +243,15 @@ void Series::plot(double data, const std::string property){
 	this->data_property.push_back(property);
 }
 
+/**
+ * @brief 線の種類込みでプロットしたいデータを加える
+ *
+ * プロットとのためのデータをこの関数を使用して1つずつ追加する
+ *
+ * @param data 追加するxデータ
+ * @param data 追加するyデータ
+ *
+ */
 void Series::plot(double x_data, double y_data){
 
 	//最初の一回だけ，segmentation faultを防ぐために空データを
@@ -238,6 +273,15 @@ void Series::plot(double x_data, double y_data){
 	this->data_property_buffer.push_back("w lp lt 7 lw 1");
 }
 
+/**
+ * @brief 線の種類込みで，プロットしたいベクターデータを加える
+ *
+ * @param x_data プロットしたいxデータ
+ * @param y_data プロットしたいyデータ
+ * @param property 線の種類などの設定．設定方法はgnuplotに従う
+ *
+ * (例) with lp lt 7 lw 2
+ */
 void Series::plot(double x_data, double y_data, const std::string property){
 
 	//最初の一回だけ，segmentation faultを防ぐために空データを

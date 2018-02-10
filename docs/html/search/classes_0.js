@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gnuplot',['Gnuplot',['../class_gnuplot.html',1,'']]]
+  ['bar',['Bar',['../class_bar.html',1,'']]]
 ];

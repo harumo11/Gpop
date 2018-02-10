@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pie',['Pie',['../class_pie.html',1,'']]]
+  ['gnuplot',['Gnuplot',['../class_gnuplot.html',1,'']]]
 ];

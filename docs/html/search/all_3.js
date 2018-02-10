@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['limit_5fmax_5fnumber',['limit_max_number',['../class_series.html#a2b61b3c39d61cdfd79cd2206b6d8852f',1,'Series']]]
+  ['gnuplot',['Gnuplot',['../class_gnuplot.html',1,'Gnuplot'],['../class_gnuplot.html#a936d27de7b6f57d1f3d61491dc70f1ae',1,'Gnuplot::Gnuplot()']]],
+  ['gpop',['gpop',['../md_README.html',1,'']]]
 ];

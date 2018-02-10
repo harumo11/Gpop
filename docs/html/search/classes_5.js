@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xy',['XY',['../class_x_y.html',1,'']]]
+  ['pie',['Pie',['../class_pie.html',1,'']]]
 ];
