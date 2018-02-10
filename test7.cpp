@@ -18,8 +18,8 @@ int main(int argc, char const* argv[])
 
 		plot1.plot(data1);
 		plot2.plot(data2);
-		plot1.pause(50);
-		plot2.pause(50);
+		plot1.pause(100000);
+		plot2.pause(100000);
 	}
 	return 0;
 }
