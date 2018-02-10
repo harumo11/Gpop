@@ -149,3 +149,12 @@ void Gnuplot::util_set_y_range(double min, double max){
 }
 
 
+void Gnuplot::util_set_grid(bool should_use){
+
+	if (should_use) {
+		this->write_command("set grid lw 1.1");
+	}
+	else {
+		this->write_command("unset grid");
+	}
+}

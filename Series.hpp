@@ -38,7 +38,7 @@ class Series {
 		void plot(double x_data, double y_data);
 		void plot(double x_data, double y_data, const std::string property);
 		void show();
-		void pause(int msec);
+		void pause(int usec = 0);
 		void set_x_range(double min, double max);
 		void set_y_range(double min, double max);
 		void set_title(std::string title);

@@ -19,7 +19,7 @@ class Pie {
 
 		void plot(double data, std::string name);
 		void show();
-		void pause(int msec = 1);
+		void pause(int usec = 0);
 		void save_as_png(std::string title);
 		void set_window_size(unsigned int width, unsigned int height);
 

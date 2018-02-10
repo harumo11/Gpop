@@ -6,6 +6,7 @@
  */
 Series::Series() : pipe()
 {
+	this->pipe.util_set_grid(true);
 }
 
 
@@ -16,12 +17,14 @@ Series::Series() : pipe()
  */
 Series::Series(std::string title) : pipe()
 {
+	this->pipe.util_set_grid(true);
 	this->set_title(title);
 }
 
 
 Series::Series(std::string title, unsigned int width, unsigned int height) : pipe()
 {
+	this->pipe.util_set_grid(true);
 	this->set_title(title);
 	this->set_window_size(width, height);
 }
@@ -442,9 +445,10 @@ void Series::resize_data_container()
  * wheleループの最後で使用される
  *
  * @param msec ポーズする時間の指定，0以上の値を設定する．
+ * 0を指定すると最速で描画する
  *
  */
-void Series::pause(int msec = 0){
+void Series::pause(int usec){
 
 	//data_container_indexを0に初期化する
 	this->data_container_index = 0;
@@ -529,7 +533,7 @@ void Series::pause(int msec = 0){
 	this->pipe.flush();
 
 	//sleep
-	usleep(msec*1);
+	usleep(usec);
 }
 
 /**

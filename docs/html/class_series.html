@@ -139,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1af2d024a0906b23156c3fecc85c454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_series.html#af1af2d024a0906b23156c3fecc85c454">show</a> ()</td></tr>
 <tr class="memdesc:af1af2d024a0906b23156c3fecc85c454"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロットを描画する  <a href="#af1af2d024a0906b23156c3fecc85c454">More...</a><br /></td></tr>
 <tr class="separator:af1af2d024a0906b23156c3fecc85c454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfe50431082aef6265dcc389b3e08e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_series.html#abfe50431082aef6265dcc389b3e08e62">pause</a> (int msec)</td></tr>
-<tr class="memdesc:abfe50431082aef6265dcc389b3e08e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">リアルタイムで追加されたデータのプロットを描画する  <a href="#abfe50431082aef6265dcc389b3e08e62">More...</a><br /></td></tr>
-<tr class="separator:abfe50431082aef6265dcc389b3e08e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d00e0305a3e76c8173fbeb9a3d50396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_series.html#a1d00e0305a3e76c8173fbeb9a3d50396">pause</a> (int usec=0)</td></tr>
+<tr class="memdesc:a1d00e0305a3e76c8173fbeb9a3d50396"><td class="mdescLeft">&#160;</td><td class="mdescRight">リアルタイムで追加されたデータのプロットを描画する  <a href="#a1d00e0305a3e76c8173fbeb9a3d50396">More...</a><br /></td></tr>
+<tr class="separator:a1d00e0305a3e76c8173fbeb9a3d50396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d882497ffa509c589a8b0616e6f686f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_series.html#a0d882497ffa509c589a8b0616e6f686f">set_x_range</a> (double min, double max)</td></tr>
 <tr class="memdesc:a0d882497ffa509c589a8b0616e6f686f"><td class="mdescLeft">&#160;</td><td class="mdescRight">x軸の範囲を設定する  <a href="#a0d882497ffa509c589a8b0616e6f686f">More...</a><br /></td></tr>
 <tr class="separator:a0d882497ffa509c589a8b0616e6f686f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,7 +224,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="abfe50431082aef6265dcc389b3e08e62"></a>
+<a class="anchor" id="a1d00e0305a3e76c8173fbeb9a3d50396"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -232,7 +232,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">void Series::pause </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>msec</em> = <code>1</code></td><td>)</td>
+          <td class="paramname"><em>usec</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,7 +242,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>wheleループの最後で使用される</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msec</td><td>ポーズする時間の指定，0以上の値を設定する． </td></tr>
+    <tr><td class="paramname">msec</td><td>ポーズする時間の指定，0以上の値を設定する． 0を指定すると最速で描画する </td></tr>
   </table>
   </dd>
 </dl>

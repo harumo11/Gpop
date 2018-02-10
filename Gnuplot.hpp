@@ -26,6 +26,7 @@ class Gnuplot {
 		void util_set_window_size(unsigned int width, unsigned int height);
 		void util_set_x_range(double min, double max);
 		void util_set_y_range(double min, double max);
+		void util_set_grid(bool should_set);
 
 
 	private:
