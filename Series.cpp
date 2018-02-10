@@ -444,7 +444,7 @@ void Series::resize_data_container()
  * @param msec ポーズする時間の指定，0以上の値を設定する．
  *
  */
-void Series::pause(int msec = 1){
+void Series::pause(int msec = 0){
 
 	//data_container_indexを0に初期化する
 	this->data_container_index = 0;

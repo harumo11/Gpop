@@ -154,7 +154,7 @@ void Pie::show(){
 	this->pipe.flush();
 }
 
-void Pie::pause(int msec){
+void Pie::pause(int msec = 0){
 
 	//設定を行う
 	//アスペクト比を１：１に
@@ -229,7 +229,7 @@ void Pie::pause(int msec){
 	this->data_container.clear();
 
 	//sleep
-	usleep(msec*1000);
+	usleep(msec*1);
 
 }
 
