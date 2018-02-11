@@ -390,6 +390,9 @@ void Series::show()
  *
  * @param min x軸の最小値
  * @param max x軸の最大値
+ *
+ * \note
+ * この関数を使用するとデフォルトで有効なautoscaleはすべて解除されます．
  */
 void Series::set_x_range(double min, double max)
 {
@@ -415,6 +418,9 @@ void Series::set_autoscale(){
  *
  * @param min y軸の最小値
  * @param max y軸の最小値
+ *
+ * \note
+ * この関数を使用するとデフォルトで有効なautoscaleはすべて解除されます．
  */
 void Series::set_y_range(double min, double max)
 {
