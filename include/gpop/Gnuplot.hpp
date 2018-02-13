@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
-#include <Logger/Logger.hpp>
+//#include <Logger/Logger.hpp>
 
 class Gnuplot {
 	public:

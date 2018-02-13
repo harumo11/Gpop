@@ -1,6 +1,7 @@
 #include <string>
 #include <cmath>
-#include "Pie.hpp"
+
+#include "../include/gpop/Pie.hpp"
 
 /**
  * @brief 円グラフのコンストラクタ 1 of 2

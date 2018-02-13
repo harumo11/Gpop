@@ -1,4 +1,4 @@
-#include "Hist.hpp"
+#include "../include/gpop/Hist.hpp"
 
 Hist::Hist() : pipe() {
 

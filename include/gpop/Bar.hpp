@@ -8,7 +8,7 @@
 #include <utility>
 #include <unistd.h>
 #include "Gnuplot.hpp"
-#include <Logger/Logger.hpp>
+//#include <Logger/Logger.hpp>
 
 /**
  * @brief ２次元座標を表すクラス

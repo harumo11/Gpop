@@ -1,5 +1,4 @@
-//#include "../include/gpop/Gnuplot.hpp"
-#include "../include/Gnuplot.hpp"
+#include "../include/gpop/Gnuplot.hpp"
 
 
 /**
@@ -10,7 +9,8 @@
 Gnuplot::Gnuplot(){
 
 	if (this->open_gnuplot() == false) {
-		std::cout << Logger::error() << "Can not open a pipe. Have you already install gnuplot?" << std::endl;
+		//std::cout << Logger::error() << "Can not open a pipe. Have you already install gnuplot?" << std::endl;
+		std::cout << "Can not open a pipe. Have you already install gnuplot?" << std::endl;
 		this->pipe_state = false;
 	}
 	else {

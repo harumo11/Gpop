@@ -1,4 +1,4 @@
-#include "Series.hpp"
+#include "../include/gpop/Series.hpp"
 
 
 /**
