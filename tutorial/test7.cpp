@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <unistd.h>
-#include "Series.hpp"
+#include <gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {

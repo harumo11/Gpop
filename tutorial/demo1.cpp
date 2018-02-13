@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include "Series.hpp"
+#include <gpop/Series.hpp>
 
 using namespace std;
 

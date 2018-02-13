@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
-#include "Pie.hpp"
+#include <gpop/Pie.hpp>
 
 int main(int argc, char const* argv[])
 {
