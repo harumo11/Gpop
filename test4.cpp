@@ -21,7 +21,7 @@ int main(int argc, char const* argv[])
 
 		plot.plot(data1);
 		plot.plot(data2);
-		plot.pause(100);
+		plot.pause(100000);
 	}
 	return 0;
 }

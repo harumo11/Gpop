@@ -1,8 +1,11 @@
 # Gpop | Serise
 
 
-| [Home](./Series.md) | [Tutorial](./Series_tuto.md) | [API](./html/index.html)|
-|--------|--------|------|
+[Home](./Series.md) 
+
+[Tutorial](./Series_tuto.md) 
+
+[API](./html/index.html)
 
 ## Introduction
 Seriseは一連のデータをプロットするものです．

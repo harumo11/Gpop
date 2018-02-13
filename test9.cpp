@@ -15,7 +15,7 @@ int main(int argc, char const* argv[])
 	plot.plot(-1,-1,1,1);
 	plot.show();
 
-	sleep(3);
+	std::cin.get();
 
 	return 0;
 }
