@@ -1,5 +1,5 @@
 //#include "../include/gpop/Gnuplot.hpp"
-#include "Gnuplot.hpp"
+#include "../include/Gnuplot.hpp"
 
 
 /**
