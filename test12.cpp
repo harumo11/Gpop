@@ -1,25 +1,15 @@
 #include <iostream>
 #include <vector>
-#include <random>
 #include "Bar.hpp"
 
 int main(int argc, char const* argv[])
 {
 	Bar plot;
-	std::random_device rnd;
-	std::vector<double> vec;
-
-	for (int i = 0; i < 20; i++) {
-		vec.push_back(rnd());
-	}
-	plot.plot(vec);
-	vec.clear();
-
-	for (int i = 0; i < 20; i++) {
-		vec.push_back(rnd());
-	}
-	plot.plot(vec);
-
+	plot.plot(10, "good");
+	plot.plot(24, "soso");
+	plot.plot(6,  "nomal");
+	plot.plot(4,  "notgood");
+	plot.plot(1,  "bad");
 	plot.show();
 	std::cin.get();
 
