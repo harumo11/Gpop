@@ -153,6 +153,20 @@ void Bar::show()
 	this->data_container.clear();
 }
 
+/**
+ * @brief リアルタイムで追加されたデータのグラフを描画する
+ *
+ * @param usec ポーズする時間の指定，０以上の値を設定する．
+ * ０を指定すると最速で描画する．
+ */
+void Bar::pause(int usec){
+	this->show();
+
+	if (usec != 0) {
+		usleep(usec);
+	}
+}
+
 
 /**
  * @brief x軸の範囲を設定する

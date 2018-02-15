@@ -30,6 +30,7 @@ class Bar {
 
 		void plot(double data, const std::string label);
 		void show();
+		void pause(int usec = 0);
 		void set_box_width(double relative = 0.5);
 		void rotate_label(int angle = -45);
 		void set_x_range(double min, double max);

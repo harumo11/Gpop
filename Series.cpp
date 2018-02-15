@@ -450,8 +450,6 @@ void Series::resize_data_container()
 /**
  * @brief リアルタイムで追加されたデータのプロットを描画する
  *
- * wheleループの最後で使用される
- *
  * @param msec ポーズする時間の指定，0以上の値を設定する．
  * 0を指定すると最速で描画する
  *
