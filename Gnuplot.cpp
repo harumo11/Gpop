@@ -114,9 +114,25 @@ void Gnuplot::util_set_x_label(std::string label){
 	this->write_command("set xl " + com);
 }
 
+void Gnuplot::util_set_x_label(std::string label, unsigned int font_size){
+
+	std::string com = "font \"Arial," + std::to_string(font_size) + "\"";
+	this->write_command("set xl " + com);
+	com = "\"" + label + "\"";
+	this->write_command("set xl " + com);
+}
+
 void Gnuplot::util_set_y_label(std::string label){
 
 	std::string com = "\"" + label + "\"";
+	this->write_command("set yl " + com);
+}
+
+void Gnuplot::util_set_y_label(std::string label, unsigned int font_size){
+
+	std::string com = "font \"Arial," + std::to_string(font_size) + "\"";
+	this->write_command("set yl " + com);
+	com = "\"" + label + "\"";
 	this->write_command("set yl " + com);
 }
 
@@ -157,4 +173,16 @@ void Gnuplot::util_set_grid(bool should_use){
 	else {
 		this->write_command("unset grid");
 	}
+}
+
+void Gnuplot::util_set_title(std::string title){
+	std::string com = "\"" + title + "\"";
+	this->write_command("set title " + com);
+}
+
+void Gnuplot::util_set_title(std::string title, unsigned int font_size){
+	std::string com = "font \"Arial," + std::to_string(font_size) + "\"";
+	this->write_command("set title " + com);
+	com = "\"" + title + "\"";
+	this->write_command("set title " + com);
 }

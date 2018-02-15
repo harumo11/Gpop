@@ -337,7 +337,9 @@ void Series::set_title(std::string title)
 	this->pipe.write_command("set title " + com);
 }
 
-
+void Series::set_title(std::string title, unsigned font_size){
+	this->pipe.util_set_title(title, font_size);
+}
 
 
 /**
@@ -570,6 +572,10 @@ void Series::set_x_label(std::string label)
 	this->pipe.write_command("set xl " + com);
 }
 
+void Series::set_x_label(std::string label, unsigned int font_size){
+	this->pipe.util_set_x_label(label, font_size);
+}
+
 
 /**
  * @brief y軸の名称を設定する
@@ -583,6 +589,9 @@ void Series::set_y_label(std::string label)
 	this->pipe.write_command("set yl " + com);
 }
 
+void Series::set_y_label(std::string label, unsigned int font_size){
+	this->pipe.util_set_y_label(label, font_size);
+}
 
 /**
  *  @brief pngとしてグラフを保存する．

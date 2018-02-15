@@ -42,9 +42,12 @@ class Series {
 		void set_x_range(double min, double max);
 		void set_y_range(double min, double max);
 		void set_title(std::string title);
+		void set_title(std::string title, unsigned int font_size);
 		void limit_max_number(int number);
 		void set_x_label(std::string label);
+		void set_x_label(std::string label, unsigned int font_size);
 		void set_y_label(std::string label);
+		void set_y_label(std::string label, unsigned int font_size);
 		void save_as_png(std::string title);
 		void set_window_size(unsigned int width, unsigned int height);
 		void set_autoscale();
