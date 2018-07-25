@@ -109,7 +109,7 @@ void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data){
 	XY coorinate;
 
 	//x_dataとy_dataのサイズが等しくなければエラーを起こす
-	if (x_data.size() == y_data.size()) {
+	if (x_data.size() != y_data.size()) {
 		std::cout << "[error] in Series::plot. x_data's size and y_data' size is not same" << std::endl;
 		std::exit(1);
 	}
@@ -149,7 +149,7 @@ void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data, cons
 	XY coorinate;
 
 	//x_dataとy_dataのサイズが等しくなければエラーを起こす
-	if (x_data.size() == y_data.size()) {
+	if (x_data.size() != y_data.size()) {
 		std::cout << "[error] in Series::plot. x_data's size and y_data' size is not same" << std::endl;
 		std::exit(1);
 	}

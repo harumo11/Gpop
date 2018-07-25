@@ -12,9 +12,7 @@ int main(int argc, char const* argv[])
 {
 	double res = 50;
 
-	Hist plot(0.9);
-	plot.set_line(true);
-	plot.set_line(false);
+	Hist plot(5);
 
 	for (int i = -50; i < res; i++) {
 		double x = (double)i/res;
