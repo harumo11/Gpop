@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 	for (int i = 0; i < 30; i++) {
 		v.push_back(std::cos(6*i*M_PI/180));
 	}
-	plot.plot(v, "w lp lw 2 lc rgb \"blue\" ");
+	plot.plot(v, "w line lw 2 lc rgb \"royalblue\" ");
 
 	v.clear();
 	for (int i = 0; i < 30; i++) {
