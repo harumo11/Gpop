@@ -90,7 +90,7 @@ void Series::plot(std::vector<double> &data)
 	this->data_container.push_back(coordinate_list);
 
 	//this->propertyを適当に設定
-	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+	this->data_property_buffer.push_back("with lines");
 }
 
 /**
@@ -129,7 +129,7 @@ void Series::plot(std::vector<double> &x_data, std::vector<double> &y_data){
 	this->data_container.push_back(coordinate_list);
 
 	//this->propertyを適当に設定
-	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+	this->data_property_buffer.push_back("with lines");
 }
 
 /**
@@ -221,7 +221,7 @@ void Series::plot(double data){
 	this->data_buffer.push_back(data);
 
 	//this->propertyを適当に設定
-	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+	this->data_property_buffer.push_back("with lines");
 }
 
 
@@ -273,7 +273,7 @@ void Series::plot(double x_data, double y_data){
 	this->data_container_index++;
 
 	//this->propertyを適当に設定
-	this->data_property_buffer.push_back("w lp lt 7 lw 1");
+	this->data_property_buffer.push_back("with lines");
 }
 
 /**
