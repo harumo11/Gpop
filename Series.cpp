@@ -408,10 +408,19 @@ void Series::set_x_range(double min, double max)
 
 /**
  *  @brief autoscaleを使用する
+ *
+ *  @param should_autoscale  true -> set, false -> unset.
+ *
  */
-void Series::set_autoscale(){
-	this->pipe.write_command("set autoscale");
-	this->is_autoscale = true;
+void Series::set_autoscale(bool should_autoscale){
+	if (should_autoscale == true) {
+		this->pipe.write_command("set autoscale");
+		this->is_autoscale = true;
+	}
+	else {
+		this->pipe.write_command("unset autoscale");
+		this->is_autoscale = false;
+	}
 }
 
 

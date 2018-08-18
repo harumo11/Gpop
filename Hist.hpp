@@ -27,6 +27,7 @@ class Hist {
 		void set_window_size(unsigned int width, unsigned int height);
 		void set_x_range(double min, double max);
 		void set_y_range(double min, double max);
+		void set_auto_scale(bool should_autoscale);
 
 
 	private:

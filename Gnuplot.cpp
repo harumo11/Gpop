@@ -186,3 +186,12 @@ void Gnuplot::util_set_title(std::string title, unsigned int font_size){
 	com = "\"" + title + "\"";
 	this->write_command("set title " + com);
 }
+
+void Gnuplot::util_set_autoscale(bool should_autoscale){
+	if (should_autoscale == true) {
+		this->write_command("set autoscale");
+	}
+	else {
+		this->write_command("unset autoscale");
+	}
+}

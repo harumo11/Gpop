@@ -7,13 +7,13 @@
 int main(int argc, char const* argv[])
 {
 	Bar plot;
-	for (int i = 0; i < 100; i++) {
-		double good_data = std::cos(i*0.01);
-		double bad_data  = std::sin(i*0.01);
+	for (double i = 0; i < M_PI/2; i+=0.03) {
+		double good_data = std::cos(i);
+		double bad_data  = 1-std::sin(i);
 		plot.plot(good_data, "good");
 		plot.plot(bad_data,  "bad");
+		usleep(1000000);
 		plot.show();
-		usleep(100000);
 	}
 	return 0;
 }

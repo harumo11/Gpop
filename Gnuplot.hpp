@@ -30,6 +30,7 @@ class Gnuplot {
 		void util_set_x_range(double min, double max);
 		void util_set_y_range(double min, double max);
 		void util_set_grid(bool should_set);
+		void util_set_autoscale(bool should_autoscale);	
 
 
 	private:
