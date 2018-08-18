@@ -238,6 +238,15 @@ void Bar::save_as_png(std::string title)
 }
 
 
+/**
+ * @brief autoscaleを設定する関数
+ *	ただし，棒グラフの場合は自動でgnuplot内で自動的に設定されるので
+ *	手動で設定する必要なし．そのため，将来的に必要になった時の
+ *	ためにprivate関数にしておく．
+ *
+ * @param should_autoscale 
+ * 自動でスケール調整を行うか否かを設定する．
+ */
 void Bar::set_autoscale(bool should_autoscale){
 	this->pipe.util_set_autoscale(should_autoscale);
 }
