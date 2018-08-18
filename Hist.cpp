@@ -91,11 +91,6 @@ void Hist::set_window_size(unsigned int width, unsigned int height){
 }
 
 void Hist::set_autoscale(bool should_autoscale){
-	if (should_autoscale == true) {
-		this->pipe.util_set_autoscale(true);
-	}
-	else {
-		this->pipe.util_set_autoscale(false);
-	}
+		this->pipe.util_set_autoscale(should_autoscale);
 }
 
