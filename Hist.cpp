@@ -89,3 +89,13 @@ void Hist::set_y_range(double min, double max){
 void Hist::set_window_size(unsigned int width, unsigned int height){
 	this->pipe.util_set_window_size(width, height);
 }
+
+void Hist::set_autoscale(bool should_autoscale){
+	if (should_autoscale == true) {
+		this->pipe.util_set_autoscale(true);
+	}
+	else {
+		this->pipe.util_set_autoscale(false);
+	}
+}
+
