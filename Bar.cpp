@@ -237,3 +237,7 @@ void Bar::save_as_png(std::string title)
 	this->pipe.write_command("set output");
 }
 
+
+void Bar::set_autoscale(bool should_autoscale){
+	this->pipe.util_set_autoscale(should_autoscale);
+}

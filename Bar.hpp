@@ -40,6 +40,7 @@ class Bar {
 		void set_y_label(std::string label);
 		void save_as_png(std::string title);
 		void set_window_size(unsigned int width, unsigned int height);
+		void set_autoscale(bool should_autoscale);
 
 	private:
 		std::string make_command();
