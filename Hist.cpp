@@ -26,7 +26,6 @@ Hist::~Hist() {
  */
 void Hist::plot(std::vector<double> &data){
 
-	std::cout << "debug0" << std::endl;
 	this->bin_container.push_back(this->make_hist(data));
 
 }
@@ -53,7 +52,6 @@ unsigned int Hist::count_elements(std::vector<double> data, double first_number,
 		}
 	}
 
-	std::cout << "debug1" << std::endl;
 	return counted_number;
 }
 
@@ -80,7 +78,6 @@ std::vector<Bin> Hist::make_hist(std::vector<double> data){
 		bin_vec.push_back(bin);
 	}
 
-	std::cout << "debug2" << std::endl;
 	return bin_vec;
 }
 
@@ -106,11 +103,9 @@ void Hist::show() {
 	for (auto&& vec : this->bin_container){
 		for (auto&& e : vec){
 			std::string com = std::to_string(e.x) + "\t" + std::to_string(e.y);
-			std::cout << com << std::endl;
 			this->pipe.write_command(com);
 		}
 		//ひとつの行が終わったことをeを送ることで伝える．
-		std::cout << std::endl;
 		this->pipe.write_command("e");
 	}
 
