@@ -14,7 +14,6 @@ int main(int argc, char const* argv[])
 	}
 
 	Hist plot;
-	plot.set_x_range(-5,5);
 	plot.plot(data1);
 	plot.plot(data2);
 	plot.show();
