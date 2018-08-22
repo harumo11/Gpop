@@ -6,12 +6,25 @@ Hist::Hist() : pipe() {
 
 }
 
+/**
+ * @brief コンストラクタ
+ *
+ * @param bin_number ビンの数
+ *
+ * ビンとは各階級の数．データをどのくらいの頻度に分割するか
+ * を示す．
+ *
+ * \note デフォルトはbin_number = 10
+ */
 Hist::Hist(const unsigned int bin_number){
 
 	this->bin_number = bin_number;
 
 }
 
+/**
+ * @brief デストラクタ
+ */
 Hist::~Hist() {
 
 	this->pipe.write_command("quit");
@@ -56,6 +69,14 @@ unsigned int Hist::count_elements(std::vector<double> data, double first_number,
 }
 
 
+/**
+ * @brief 与えられたデータからヒストグラムを計算する関数
+ *
+ * @param data ヒストグラムを計算する元となるデータ
+ *
+ * @return 計算したヒストグラムのデータ
+ * 各要素の階級と度数が入ったデータ
+ */
 std::vector<Bin> Hist::make_hist(std::vector<double> data){
 
 	std::vector<Bin> bin_vec;
@@ -81,6 +102,10 @@ std::vector<Bin> Hist::make_hist(std::vector<double> data){
 	return bin_vec;
 }
 
+/**
+ * @brief グラフを表示する関数
+ *
+ */
 void Hist::show() {
 
 	//棒グラフを色で埋めることをgnuplotに伝える
@@ -113,6 +138,12 @@ void Hist::show() {
 	this->pipe.flush();
 }
 
+/**
+ * @brief ヒストグラムの棒グラフをラインで囲むかどうかを
+ * 設定する関数
+ *
+ * @param shoule_use_line  true -> use line, false -> unuse line
+ */
 void Hist::set_line(bool shoule_use_line){
 
 	if (shoule_use_line) {
@@ -123,6 +154,11 @@ void Hist::set_line(bool shoule_use_line){
 	}
 }
 
+/**
+ * @brief 追加されたデータの数に応じてgnuplotのコマンドを作成する関数
+ *
+ * @return 作成されたgnuplotの関数
+ */
 std::string Hist::make_command(){
 	
 	std::string command = "plot ";
@@ -135,26 +171,59 @@ std::string Hist::make_command(){
 	return command;
 }
 
+/**
+ * @brief x軸のラベルを設定する関数
+ *
+ * @param label 設定したい軸ラベル
+ */
 void Hist::set_x_label(std::string label){
 	this->pipe.util_set_x_label(label);
 }
 
+/**
+ * @brief y軸のラベルを設定する関数
+ *
+ * @param label 設定したい軸ラベル
+ */
 void Hist::set_y_label(std::string label){
 	this->pipe.util_set_y_label(label);
 }
 
+/**
+ * @brief x軸の値域を設定する関数
+ *
+ * @param min 値域の下限
+ * @param max 値域の上限
+ */
 void Hist::set_x_range(double min, double max){
 	this->pipe.util_set_x_range(min, max);
 }
 
+/**
+ * @brief y軸の値域を設定する関数
+ *
+ * @param min 値域の下限
+ * @param max 値域の上限
+ */
 void Hist::set_y_range(double min, double max){
 	this->pipe.util_set_y_range(min, max);
 }
 
+/**
+ * @brief ウィンドウの大きさを設定する関数
+ *
+ * @param width 横幅
+ * @param height 縦幅
+ */
 void Hist::set_window_size(unsigned int width, unsigned int height){
 	this->pipe.util_set_window_size(width, height);
 }
 
+/**
+ * @brief x,yの値域を描画データの下限と上限に設定する
+ *
+ * @param should_autoscale true -> use auto scale, false -> unuse auto scale
+ */
 void Hist::set_autoscale(bool should_autoscale){
 		this->pipe.util_set_autoscale(should_autoscale);
 }
