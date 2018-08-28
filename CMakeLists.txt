@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 add_definitions("-std=c++11")
+set(CMAKE_CXX_FLAGS "-Wall -g")
 
 add_executable(test1 test1.cpp Gnuplot.cpp)
 add_executable(test2 test2.cpp Series.cpp Gnuplot.cpp)
@@ -27,6 +28,7 @@ add_executable(test21 test21.cpp Series.cpp Gnuplot.cpp)
 add_executable(test22 test22.cpp Series.cpp Gnuplot.cpp)
 add_executable(test23 test23.cpp Hist.cpp Gnuplot.cpp)
 add_executable(test24 test24.cpp Hist.cpp Gnuplot.cpp)
+add_executable(test25 test25.cpp Series.cpp Gnuplot.cpp)
 #add_executable(demo1 demo1.cpp Series.cpp Gnuplot.cpp)
 #add_executable(demo2 demo2.cpp Series.cpp Gnuplot.cpp)
 
@@ -55,5 +57,6 @@ target_link_libraries(test21 Logger)
 target_link_libraries(test22 Logger)
 target_link_libraries(test23 Logger)
 target_link_libraries(test24 Logger)
+target_link_libraries(test25 Logger glog)
 #target_link_libraries(demo1 Logger)
 #target_link_libraries(demo2 Logger)

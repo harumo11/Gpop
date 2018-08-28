@@ -67,6 +67,9 @@ void Series::set_window_size(unsigned int width, unsigned int height)
  * x座標のデータを使用しないため，x座標は連続した整数が用いられる
  *
  * @param data プロットしたいデータ
+ *
+ * \note 
+ * リアルタイムプロットを行いたい場合はこの関数は使用できません．
  */
 void Series::plot(std::vector<double> &data)
 {
