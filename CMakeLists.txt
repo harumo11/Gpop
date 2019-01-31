@@ -1,60 +1,23 @@
 cmake_minimum_required(VERSION 3.5)
 
-add_definitions("-std=c++11")
-set(CMAKE_CXX_FLAGS "-Wall -g")
+set(SRC_DIR src)
+set(INCLUDE_DIR ./include/gpop)
+include_directories(${INCLUDE_DIR})
 
-add_executable(test1 test1.cpp Gnuplot.cpp)
-add_executable(test2 test2.cpp Series.cpp Gnuplot.cpp)
-add_executable(test3 test3.cpp Series.cpp Gnuplot.cpp)
-add_executable(test4 test4.cpp Series.cpp Gnuplot.cpp)
-add_executable(test0 test0.cpp Series.cpp Gnuplot.cpp)
-add_executable(test5 test5.cpp Series.cpp Gnuplot.cpp)
-add_executable(test6 test6.cpp Pie.cpp Gnuplot.cpp)
-add_executable(test7 test7.cpp Series.cpp Gnuplot.cpp)
-add_executable(test8 test8.cpp Series.cpp Gnuplot.cpp)
-add_executable(test9 test9.cpp Vector.cpp Gnuplot.cpp)
-add_executable(test10 test10.cpp Pie.cpp Gnuplot.cpp)
-#add_executable(test11 test11.cpp Hist.cpp Gnuplot.cpp)
-add_executable(test12 test12.cpp Bar.cpp Gnuplot.cpp)
-add_executable(test13 test13.cpp Pie.cpp Gnuplot.cpp)
-add_executable(test14 test14.cpp Pie.cpp Gnuplot.cpp)
-add_executable(test15 test15.cpp Bar.cpp Gnuplot.cpp)
-add_executable(test16 test16.cpp Bar.cpp Gnuplot.cpp)
-add_executable(test17 test17.cpp Series.cpp Gnuplot.cpp)
-add_executable(test18 test18.cpp Series.cpp Gnuplot.cpp)
-add_executable(test19 test19.cpp Series.cpp Gnuplot.cpp)
-#add_executable(test20 test20.cpp Series.cpp Gnuplot.cpp)
-add_executable(test21 test21.cpp Series.cpp Gnuplot.cpp)
-add_executable(test22 test22.cpp Series.cpp Gnuplot.cpp)
-add_executable(test23 test23.cpp Hist.cpp Gnuplot.cpp)
-add_executable(test24 test24.cpp Hist.cpp Gnuplot.cpp)
-#add_executable(demo1 demo1.cpp Series.cpp Gnuplot.cpp)
-#add_executable(demo2 demo2.cpp Series.cpp Gnuplot.cpp)
+add_library(gpop ${SRC_DIR}/Bar.cpp
+	               ${SRC_DIR}/Gnuplot.cpp
+				   ${SRC_DIR}/Pie.cpp
+				   ${SRC_DIR}/Series.cpp
+				   ${SRC_DIR}/Vector.cpp
+				   )
 
-target_link_libraries(test1 Logger)
-target_link_libraries(test2 Logger)
-target_link_libraries(test3 Logger)
-target_link_libraries(test4 Logger)
-target_link_libraries(test0 Logger)
-target_link_libraries(test5 Logger)
-target_link_libraries(test6 Logger)
-target_link_libraries(test7 Logger)
-target_link_libraries(test8 Logger)
-target_link_libraries(test9 Logger)
-target_link_libraries(test10 Logger)
-#target_link_libraries(test11 Logger)
-target_link_libraries(test12 Logger)
-target_link_libraries(test13 Logger)
-target_link_libraries(test14 Logger)
-target_link_libraries(test15 Logger)
-target_link_libraries(test16 Logger)
-target_link_libraries(test17 Logger)
-target_link_libraries(test18 Logger)
-target_link_libraries(test19 Logger)
-#target_link_libraries(test20 Logger)
-target_link_libraries(test21 Logger)
-target_link_libraries(test22 Logger)
-target_link_libraries(test23 Logger)
-target_link_libraries(test24 Logger)
-#target_link_libraries(demo1 Logger)
-#target_link_libraries(demo2 Logger)
+install(TARGETS gpop
+	    RUNTIME DESTINATION bin
+		LIBRARY DESTINATION lib
+		ARCHIVE DESTINATION lib
+		)
+
+install(
+		DIRECTORY include/gpop
+		DESTINATION /usr/local/include
+		)
