@@ -1,5 +1,14 @@
 # gpop
 
+## check list 
+
+| name | validation | explanation |
+| ---- | ---------- | ----------- |
+|      |            |             |
+|      |            |             |
+
+
+
 ## TODO list
 
 - [Hist,Bar]Histはヒストグラムをする（Opencv）Barは棒グラフ．明確な差異がある
