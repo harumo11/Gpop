@@ -1,4 +1,4 @@
-#include "Series.hpp"
+#include <gpop/Series.hpp>
 #include <unistd.h>
 #include <iostream>
 #include <string>

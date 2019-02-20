@@ -9,6 +9,7 @@ add_library(gpop ${SRC_DIR}/Bar.cpp
 				   ${SRC_DIR}/Pie.cpp
 				   ${SRC_DIR}/Series.cpp
 				   ${SRC_DIR}/Vector.cpp
+				   ${SRC_DIR}/Hist.cpp
 				   )
 
 install(TARGETS gpop

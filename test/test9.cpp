@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Vector.hpp"
+#include <gpop/Vector.hpp>
 #include <unistd.h>
 
 int main(int argc, char const* argv[])

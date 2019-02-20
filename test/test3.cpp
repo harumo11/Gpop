@@ -1,4 +1,4 @@
-#include "Series.hpp"
+#include <gpop/Series.hpp>
 #include <unistd.h>
 #include <iostream>
 #include <vector>
@@ -18,7 +18,7 @@ int main(int argc, char const* argv[])
 		data = sin(i * M_PI / 180);
 
 		plot.plot(data);
-		plot.pause(10);
+		plot.pause(5000);
 	}
 
 	return 0;
