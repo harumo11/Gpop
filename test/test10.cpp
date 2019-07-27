@@ -12,7 +12,7 @@ int main(int argc, char const* argv[])
 	for (int i = 0; i < 100; i++) {
 		plot.plot(i, "a");
 		plot.plot(50, "b");
-		plot.pause(10000);
+		plot.pause(100000);
 	}
 	plot.save_as_png("test10_");
 
