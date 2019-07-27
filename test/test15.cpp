@@ -14,9 +14,7 @@ int main(int argc, char const* argv[])
 		double bad_data  = 1-std::sin(i);
 		plot.plot(good_data, "good");
 		plot.plot(bad_data,  "bad");
-		usleep(100000);
-		plot.show();
-		//plot.set_autoscale(false);
+		plot.pause(100000);
 	}
 	return 0;
 }
