@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../include/gpop/Pie.hpp"
+#include <gpop/Pie.hpp>
 
 int main(int argc, char const* argv[])
 {

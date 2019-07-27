@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-#include "../include/gpop/Hist.hpp"
+#include <gpop/Hist.hpp>
 
 using namespace std;
 

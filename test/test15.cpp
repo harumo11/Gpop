@@ -3,7 +3,7 @@
 #include <vector>
 #include <unistd.h>
 
-#include "../include/gpop/Bar.hpp"
+#include <gpop/Bar.hpp>
 
 int main(int argc, char const* argv[])
 {

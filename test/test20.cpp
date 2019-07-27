@@ -2,7 +2,7 @@
 #include <random>
 #include <vector>
 
-#include "../include/gpop/Series.hpp"
+#include <gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {

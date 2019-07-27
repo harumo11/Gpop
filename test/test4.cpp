@@ -3,7 +3,7 @@
 #include <cmath>
 #include <unistd.h>
 
-#include "../include/gpop/Series.hpp"
+#include <gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {
