@@ -23,7 +23,9 @@
 
 ## API 
 
-APIに関するドキュメントは[ここ](docs/html/index.html)にあります．
+APIに関するドキュメントは[ここ](
+https://harumo11.github.io/Gpop/
+)にあります．
 
 ## Dependency
 
