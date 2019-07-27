@@ -4,12 +4,12 @@
 #include <vector>
 #include <cmath>
 
-#include <gpop/Series.hpp>
+#include <Gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {
 	
-	Series plot("test8", 300, 300);
+	Gpop::Series plot("test8", 300, 300);
 
 	std::vector<double> v;
 	for (int i = 0; i < 180; i++) {
