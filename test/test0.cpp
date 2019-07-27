@@ -1,4 +1,4 @@
-#include <gpop/Series.hpp>
+#include <Gpop/Series.hpp>
 
 #include <iostream>
 #include <string>
