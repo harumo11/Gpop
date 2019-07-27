@@ -18,6 +18,8 @@ int main(int argc, char const* argv[])
 	plot.set_x_label("x label", 11);
 	plot.set_y_label("y label", 11);
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 	return 0;
 }

@@ -17,6 +17,8 @@ int main(int argc, char const* argv[])
 	plot.set_x_range(-5,5);
 	plot.plot(data);
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 	
 	return 0;

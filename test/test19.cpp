@@ -15,6 +15,8 @@ int main(int argc, char const* argv[])
 	Gpop::Series plot;
 	plot.plot(vec, "t\"Main\"");
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 	return 0;
 }

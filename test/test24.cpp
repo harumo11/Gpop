@@ -18,6 +18,8 @@ int main(int argc, char const* argv[])
 	plot.plot(data1);
 	plot.plot(data2);
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 	
 	return 0;
