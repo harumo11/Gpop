@@ -1,4 +1,4 @@
-#include "../include/gpop/Bar.hpp"
+#include "../include/Gpop/Bar.hpp"
 
 namespace Gpop {
 	

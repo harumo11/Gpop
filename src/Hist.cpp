@@ -1,6 +1,6 @@
 #include <algorithm>
 #include <cmath>
-#include "../include/gpop/Hist.hpp"
+#include "../include/Gpop/Hist.hpp"
 
 namespace Gpop {
 	

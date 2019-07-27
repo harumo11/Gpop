@@ -1,4 +1,4 @@
-#include "../include/gpop/Series.hpp"
+#include "../include/Gpop/Series.hpp"
 
 namespace Gpop {
 

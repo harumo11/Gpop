@@ -1,6 +1,6 @@
 #include <string>
 #include <cmath>
-#include "../include/gpop/Pie.hpp"
+#include "../include/Gpop/Pie.hpp"
 
 namespace Gpop {
 	

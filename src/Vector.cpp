@@ -1,4 +1,4 @@
-#include "../include/gpop/Vector.hpp"
+#include "../include/Gpop/Vector.hpp"
 
 namespace Gpop {
 	
