@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 
-#include <gpop/Hist.hpp>
+#include <Gpop/Hist.hpp>
 
 int main(int argc, char const* argv[])
 {
@@ -14,7 +14,7 @@ int main(int argc, char const* argv[])
 		data2.push_back(dist(rnd));
 	}
 
-	Hist plot;
+	Gpop::Hist plot;
 	plot.plot(data1);
 	plot.plot(data2);
 	plot.show();
