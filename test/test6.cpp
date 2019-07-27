@@ -7,14 +7,14 @@
 int main(int argc, char const* argv[])
 {
 	Gpop::Pie plot;
-	std::string str;
 	
 	plot.plot(30, "a");
 	plot.plot(70, "b");
 	plot.plot(70, "c");
 	plot.show();
 
-	std::cin >> str;
+	std::cout << "Press Enter Key" << std::endl;
+	std::cin.get();
 
 	return 0;
 }
