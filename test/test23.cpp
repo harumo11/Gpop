@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
-#include "Hist.hpp"
+
+#include "../include/gpop/Hist.hpp"
 
 int main(int argc, char const* argv[])
 {

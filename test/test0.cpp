@@ -1,4 +1,5 @@
 #include <gpop/Series.hpp>
+
 #include <iostream>
 #include <string>
 #include <vector>

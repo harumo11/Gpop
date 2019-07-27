@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
-#include <gpop/Gnuplot.hpp>
+
+#include "../include/gpop/Gnuplot.hpp"
 
 int main(int argc, char const* argv[])
 {

@@ -1,9 +1,10 @@
-#include "Series.hpp"
 #include <unistd.h>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <cmath>
+
+#include "../include/gpop/Series.hpp"
 
 int main(int argc, char const* argv[])
 {

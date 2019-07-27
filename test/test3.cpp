@@ -1,8 +1,9 @@
-#include <gpop/Series.hpp>
 #include <unistd.h>
 #include <iostream>
 #include <vector>
 #include <cmath>
+
+#include "../include/gpop/Series.hpp"
 
 int main(int argc, char const* argv[])
 {

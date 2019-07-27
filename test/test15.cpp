@@ -2,7 +2,8 @@
 #include <cmath>
 #include <vector>
 #include <unistd.h>
-#include "Bar.hpp"
+
+#include "../include/gpop/Bar.hpp"
 
 int main(int argc, char const* argv[])
 {

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <random>
 #include <vector>
-#include <gpop/Series.hpp>
+
+#include "../include/gpop/Series.hpp"
 
 int main(int argc, char const* argv[])
 {

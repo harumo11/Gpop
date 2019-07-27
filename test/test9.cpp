@@ -1,6 +1,7 @@
 #include <iostream>
-#include <gpop/Vector.hpp>
 #include <unistd.h>
+
+#include "../include/gpop/Vector.hpp"
 
 int main(int argc, char const* argv[])
 {

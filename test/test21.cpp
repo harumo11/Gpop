@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Series.hpp"
+
+#include "../include/gpop/Series.hpp"
 
 int main(int argc, char const* argv[])
 {
