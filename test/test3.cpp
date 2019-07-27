@@ -19,7 +19,7 @@ int main(int argc, char const* argv[])
 		data = sin(i * M_PI / 180);
 
 		plot.plot(data);
-		plot.pause(5000);
+		plot.pause(50000);
 	}
 
 	return 0;
