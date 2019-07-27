@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include <gpop/Pie.hpp>
+#include <Gpop/Pie.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Pie plot;
+	Gpop::Pie plot;
 	
 
 	plot.set_window_size(300, 300);
