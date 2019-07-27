@@ -2,7 +2,7 @@
 #include <random>
 #include <vector>
 
-#include <gpop/Series.hpp>
+#include <Gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {
@@ -12,7 +12,7 @@ int main(int argc, char const* argv[])
 		vec.push_back(rnd());
 	}
 
-	Series plot;
+	Gpop::Series plot;
 	plot.plot(vec, "t\"Main\"");
 	plot.show();
 	std::cin.get();
