@@ -2,11 +2,11 @@
 #include <string>
 #include <unistd.h>
 
-#include <gpop/Pie.hpp>
+#include <Gpop/Pie.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Pie plot;
+	Gpop::Pie plot;
 	std::string str;
 	
 	plot.plot(30, "a");
