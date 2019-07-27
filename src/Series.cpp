@@ -1,5 +1,6 @@
 #include "../include/gpop/Series.hpp"
 
+namespace Gpop {
 
 /**
  * @brief コンストラクタ 1 of 2
@@ -620,3 +621,5 @@ void Series::save_as_png(std::string title)
 	this->pipe.write_command("set terminal x11");
 	this->pipe.write_command("set output");
 }
+
+} // namespace Gpop

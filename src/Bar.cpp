@@ -1,5 +1,7 @@
 #include "../include/gpop/Bar.hpp"
 
+namespace Gpop {
+	
 
 /**
  * @brief コンストラクタ 1 of 3
@@ -250,3 +252,5 @@ void Bar::save_as_png(std::string title)
 void Bar::set_autoscale(bool should_autoscale){
 	this->pipe.util_set_autoscale(should_autoscale);
 }
+
+} // namespace Gpop

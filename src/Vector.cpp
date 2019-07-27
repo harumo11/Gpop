@@ -1,5 +1,7 @@
 #include "../include/gpop/Vector.hpp"
 
+namespace Gpop {
+	
 /**
  * @brief コンストラクタ
  */
@@ -82,3 +84,5 @@ void Vector::set_window_size(unsigned int width, unsigned int height){
 	
 	this->pipe.util_set_window_size(width, height);
 }
+
+} // namespace Gpop

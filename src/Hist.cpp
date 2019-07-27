@@ -2,6 +2,8 @@
 #include <cmath>
 #include "../include/gpop/Hist.hpp"
 
+namespace Gpop {
+	
 Hist::Hist() : pipe() {
 
 }
@@ -228,3 +230,4 @@ void Hist::set_autoscale(bool should_autoscale){
 		this->pipe.util_set_autoscale(should_autoscale);
 }
 
+} // namespace Gpop

@@ -8,7 +8,7 @@
 int main(int argc, char const* argv[])
 {
 	
-	Series plot;
+	Gpop::Series plot;
 
 	std::vector<double> v;
 	for (int i = 0; i < 180; i++) {

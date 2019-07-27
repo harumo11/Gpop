@@ -1,7 +1,9 @@
 #include <string>
 #include <cmath>
-#include "Pie.hpp"
+#include "../include/gpop/Pie.hpp"
 
+namespace Gpop {
+	
 /**
  * @brief 円グラフのコンストラクタ 1 of 2
  */
@@ -291,3 +293,5 @@ void Pie::save_as_png(std::string title){
 	this->pipe.write_command("set terminal x11");
 	this->pipe.write_command("set output");
 }
+
+} // namespace Gpop
