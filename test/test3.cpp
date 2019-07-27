@@ -3,12 +3,12 @@
 #include <vector>
 #include <cmath>
 
-#include <gpop/Series.hpp>
+#include <Gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {
 	
-	Series plot;
+	Gpop::Series plot;
 	double data = 0;
 
 	plot.limit_max_number(50);
