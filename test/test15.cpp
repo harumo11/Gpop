@@ -3,11 +3,11 @@
 #include <vector>
 #include <unistd.h>
 
-#include <gpop/Bar.hpp>
+#include <Gpop/Bar.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Bar plot;
+	Gpop::Bar plot;
 	plot.set_y_range(0, 1.0);
 	for (double i = 0; i < M_PI/2; i+=0.03) {
 		double good_data = std::cos(i);
