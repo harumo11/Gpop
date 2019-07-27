@@ -11,6 +11,7 @@ int main(int argc, char const* argv[])
 
 	plot.show();
 
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 	return 0;
 }
