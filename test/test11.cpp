@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-#include <gpop/Hist.hpp>
+#include <Gpop/Hist.hpp>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 {
 	double res = 50;
 
-	Hist plot;
+	Gpop::Hist plot;
 	plot.set_line(true);
 	plot.set_line(false);
 
