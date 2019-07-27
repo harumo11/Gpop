@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 
-#include <gpop/Bar.hpp>
+#include <Gpop/Bar.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Bar plot;
+	Gpop::Bar plot;
 	plot.plot(10, "good");
 	plot.plot(24, "soso");
 	plot.plot(6,  "nomal");
