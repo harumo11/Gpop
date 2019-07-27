@@ -12,6 +12,8 @@ int main(int argc, char const* argv[])
 	plot.plot(4,  "notgood");
 	plot.plot(1,  "bad");
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	std::cin.get();
 
 	return 0;
