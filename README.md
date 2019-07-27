@@ -55,7 +55,7 @@
 
 Install gnuplot
 ```sh
-sudo apt-get install gnuplot
+sudo apt-get install gnuplot gnuplot-qt
 ```
 
 Build gpop
@@ -103,14 +103,14 @@ int main(void){
 
 |Name|Discription|Used class name|
 |:----:|:---------:|:-------------:|
-|test0     |とりあえずプロット|Series|
-|test1     |gnuplotを直に使う|Gnuplot|
-|test2     |複数のデータのプロット|Series|
-|test3     |リアルタイムプロット|Series|
-|test4     |複数のデータのリアルタイムプロット|Series|
+|test0     |cos関数をプロット|Series|
+|test1     |pipeを使ってsin関数をプロット|Gnuplot|
+|test2     |複数のデータのプロット＆ラベルとタイトル設定|Series|
+|test3     |リアルタイムプロット（描画範囲変更）|Series|
+|test4     |複数のデータのリアルタイムプロット（描画範囲固定）|Series|
 |test5     |タイトル＆ラベル設定|Series|
 |test6     |円グラフ|Pie|
-|test7     |複数ウィンドウのリアルタイムプロット|Series|
+|test7     |[ERROR FIX ME]複数ウィンドウのリアルタイムプロット|Series|
 |test8     |ウィンドウサイズの変更|Series|
 |test9     |ベクター図の作成|Vector|
 |test10    |リアルタイム円グラフ|Pie|

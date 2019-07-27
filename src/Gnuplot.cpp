@@ -137,7 +137,7 @@ void Gnuplot::util_set_y_label(std::string label, unsigned int font_size){
 
 void Gnuplot::util_set_window_size(unsigned int width, unsigned int height){
 
-	std::string com = "set term qt size ";
+	std::string com = "set terminal qt size ";
 	com += std::to_string(width);
 	com += ", ";
 	com += std::to_string(height);

@@ -52,7 +52,7 @@ void Series::set_window_size(unsigned int width, unsigned int height)
 	this->window_height = height;
 	this->window_width  = width;
 
-	std::string com = "set term qt size ";
+	std::string com = "set terminal qt size ";
 	com += std::to_string(this->window_width);
 	com += ", ";
 	com += std::to_string(this->window_height);
