@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 
-#include <gpop/Hist.hpp>
+#include <Gpop/Hist.hpp>
 
 int main(int argc, char const* argv[])
 {
@@ -13,7 +13,7 @@ int main(int argc, char const* argv[])
 		data.push_back(dist(rnd));
 	}
 
-	Hist plot;
+	Gpop::Hist plot;
 	plot.set_x_range(-5,5);
 	plot.plot(data);
 	plot.show();
