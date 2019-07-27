@@ -2,7 +2,7 @@
 #include <vector>
 #include <random>
 
-#include <gpop/Bar.hpp>
+#include <Gpop/Bar.hpp>
 
 int main(int argc, char const* argv[])
 {
