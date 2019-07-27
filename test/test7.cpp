@@ -3,12 +3,12 @@
 #include <cmath>
 #include <unistd.h>
 
-#include <gpop/Series.hpp>
+#include <Gpop/Series.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Series plot1("1", 300, 300);
-	Series plot2("2", 300, 300);
+	Gpop::Series plot1("1", 300, 300);
+	Gpop::Series plot2("2", 300, 300);
 
 	double data1 = 0;
 	double data2 = 0;
