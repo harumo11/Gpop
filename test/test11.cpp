@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Nomal Distribution 
 double nd(double x) {
 	return 1/(sqrt(2*M_PI))*exp(-(x*x)/2);
 }
@@ -14,17 +15,16 @@ int main(int argc, char const* argv[])
 	double res = 50;
 
 	Gpop::Hist plot;
-	plot.set_line(true);
-	plot.set_line(false);
 
 	std::vector<double> vec;
 	for (int i = -50; i < res; i++) {
 		double x = (double)i/res;
-		cout << "x = " << x << "pro = " << nd(x) << endl;
 		vec.push_back(nd(x));
 	}
 	plot.plot(vec);
 	plot.show();
+
+	std::cout << "Press Enter Key" << std::endl;
 	cin.get();
 
 	return 0;
