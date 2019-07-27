@@ -1,41 +1,17 @@
-# gpop
-
-## check list 
-
-| name | validation | explanation |
-| ---- | ---------- | ----------- |
-|      |            |             |
-|      |            |             |
-
-
-
-## TODO list
-
-- [Hist,Bar]Histはヒストグラムをする（Opencv）Barは棒グラフ．明確な差異がある
-- [Hist] 透明設定ができるように
-- [Hist] 枠の設定ができるように
-- [Hist] ヒストグラム作成ができるように
-
----
-
-## NOTE list
-- [setting] Setting - window - behavior 
-	Prevent focus stealing - ON
-
-# Gnu Plot on Pipe Library
+# Gpop (Gnuplot on pipe)
 
 簡単にデータをC++11プロットするライブラリです．
 できるだけ簡単にプロットすることに注力しています．
 
 現在，使用可能なプロットの種類は以下のとおりです．
 
-- [Serise](./docs/Series.md)
-- [Pie](./docs/Pie.md)
-- [Vector](./docs/Vector.md)
-- Histogram
-- Bar
+- Series (折れ線グラフ)
+- Pie (円グラフ)
+- Vector (矢印で構成されるグラフ)
+- Histogram (ヒストグラム)
+- Bar (棒グラフ)
 
-また，プロットする機能以外にPNGファイルとして保存したり，逐次データを更新してリアルタイムプロットを行うこともできます．下の表で表記がNoとなっていてもPNGの保存はGUIから行うことが可能であり，またEPSもGUIから保存可能です．
+また，プロットする機能以外にPNGファイルとして保存したり，逐次データを更新してリアルタイムプロットを行うこともできます．下の表で表記がNoとなっていてもPNGの保存はGUIから行うことが可能であり，またEPSもGUIから保存可能です．あくまで，プログラム上から保存の命令が出せないことを意味します．
 
 |Name|Save as PNG|Real time plot|
 |:----:|:-----------:|:--------------:|
@@ -45,10 +21,14 @@
 |Histogram|  OK  |OK      |
 |Bar| OK        |OK             |
 
+## API 
+
+APIに関するドキュメントは[ここ](docs/html/index.html)にあります．
+
 ## Dependency
 
 - gnuplot
-- ubuntu
+- Linux (Tested on Ubuntu18.04)
 - C++11
 
 ## Instalation
@@ -129,6 +109,14 @@ int main(void){
 |test23		|ヒストグラムの描画方法|
 |test24		|2つのヒストグラムのプロット|
 
+下記のコマンドで，全てのサンプルをビルドできます．
 
-
+```sh
+cd Gpop
+cd test
+mkdir build
+cd build
+cmake ..
+make
+```
 
