@@ -1,11 +1,11 @@
 #include <iostream>
 #include <unistd.h>
 
-#include <gpop/Vector.hpp>
+#include <Gpop/Vector.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Vector plot;
+	Gpop::Vector plot;
 	plot.set_x_label("X label");
 	plot.set_y_label("Y label");
 	plot.set_window_size(300, 300);
