@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include <gpop/Pie.hpp>
+#include <Gpop/Pie.hpp>
 
 int main(int argc, char const* argv[])
 {
-	Pie plot;
+	Gpop::Pie plot;
 
 	plot.plot(30, "a");
 	plot.plot(70, "b");
